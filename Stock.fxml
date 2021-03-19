@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpanestock" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1095.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpage.StockController">
+   <top>
+      <FlowPane alignment="CENTER" prefHeight="60.0" prefWidth="1200.0" style="-fx-background-color: yellow;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="317.0" text="Stock Manager">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="155.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="584.0" minWidth="10.0" prefWidth="247.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="360.0" minHeight="2.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="463.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="475.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="475.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="475.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="475.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="50.0" prefWidth="213.0" text="Product Name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="213.0" text="Product Name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="185.0" text="Product Type" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="214.0" text="Rate" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="32.0" prefWidth="215.0" text="Quantity" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="33.0" prefWidth="194.0" text="Total Cost" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="192.0" text="Date" GridPane.rowIndex="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="productname" GridPane.columnIndex="1" />
+            <TextField fx:id="amount" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="quantity" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="totalcost" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="producttype" prefHeight="23.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="date" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <left>
+      <VBox alignment="BOTTOM_LEFT" prefHeight="540.0" prefWidth="405.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="539.0" prefWidth="405.0">
+               <children>
+                  <Button fx:id="insertbtn" layoutX="203.0" layoutY="14.0" mnemonicParsing="false" onAction="#insertstock" prefHeight="37.0" prefWidth="139.0" text="Insert">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="202.0" layoutY="70.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" text="Update">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="202.0" layoutY="125.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" text="Report">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="202.0" layoutY="184.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" text="Print">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="540.0" prefWidth="393.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="194.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tablestock" onMouseClicked="#tableaction" prefHeight="194.0" prefWidth="643.0">
+              <columns>
+                <TableColumn fx:id="coldate" prefWidth="103.0" text="Date" />
+                <TableColumn fx:id="colprdname" prefWidth="113.0" text="Product Name" />
+                  <TableColumn fx:id="coltype" prefWidth="113.0" text="Type" />
+                  <TableColumn fx:id="colamt" prefWidth="113.0" text="Amount" />
+                  <TableColumn fx:id="colqty" prefWidth="73.0" text="Quantity" />
+                  <TableColumn fx:id="coltotal" prefWidth="126.0" text="Total Cost" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
